@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .rtl {
+            direction: rtl;
+        }
+        .ltr {
+            direction: ltr;
+        }
+        header {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+        }
+        .hero {
+            background: #007bff;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .features, .faq, .contact {
+            padding: 40px 20px;
+        }
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleLanguage() {
+            var body = document.body;
+            body.classList.toggle('rtl');
+            body.classList.toggle('ltr');
+            var lang = body.classList.contains('rtl') ? 'العربية' : 'English';
+            document.getElementById('lang-toggle').innerText = lang;
+        }
+    </script>
+</head>
+<body class="ltr">
+    <header>
+        <img src="logo.png" alt="Logo" style="height: 50px;">
+        <button id="lang-toggle" onclick="toggleLanguage()">English</button>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Our Support Page</h1>
+        <p>We are here to help you!</p>
+    </section>
+    <section class="features">
+        <h2>About Features</h2>
+        <p>Details about features go here.</p>
+    </section>
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>FAQ content goes here.</p>
+    </section>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <p>Contact information goes here.</p>
+    </section>
+    <button class="fab" onclick="window.location.href='mailto:support@example.com';">✉</button>
+</body>
+</html>
